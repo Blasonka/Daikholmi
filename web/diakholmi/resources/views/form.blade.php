@@ -4,44 +4,77 @@
     <section class="py-5">
         <div class="position-relative py-5">
             <img alt="" class=" position-absolute img-fluid bg-image" src="img/library2.jpg" style="z-index:-5;">
-                <div class="position-absolute bg-image"></div>
-                <div class="position-relative">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-6">
-                                <div class="bg-white p-5 rounded shadow mt-5">
-                                    <h2 class="display-6 fw-bold text-center mb-4">Jelentkezés</h2>
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="mb-3">
-                                                    <input class="form-control bg-light" placeholder="Your name"
-                                                        type="text">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="mb-3">
-                                                    <input class="form-control bg-light" placeholder="Your email"
-                                                        type="text">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="mb-3">
-                                                    <textarea class="form-control bg-light" placeholder="Your message" rows="4"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="d-grid">
-                                                    <button class="btn btn-primary" type="submit">Jelentkezés</button>
-                                                </div>
+            <div class="position-absolute bg-image"></div>
+            <div class="position-relative">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="bg-white p-5 rounded shadow mt-5">
+                                <h2 class="display-6 fw-bold text-center mb-4">Jelentkezés</h2>
+                                <form method="POST" action="{{ route('student.store') }}">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="name" class="form-label fw-semibold">Diák neve</label>
+                                                <input type="text" name="name" id="name"
+                                                    class="form-control bg-light" placeholder="Horváth Alex" required>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="school" class="form-label fw-semibold">Diák jelenlegi
+                                                    iskolája</label>
+                                                <input type="text" name="school" id="school"
+                                                    class="form-control bg-light"
+                                                    placeholder="Kölcsey Ferenc Általános Iskola" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="grade" class="form-label fw-semibold">Diák évfolyama</label>
+                                                <input type="number" name="grade" id="grade"
+                                                    class="form-control bg-light" placeholder="4" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label fw-semibold">Kapcsolattartó e-mail
+                                                    címe</label>
+                                                <input type="email" name="email" id="email"
+                                                    class="form-control bg-light" placeholder="példa@email.com" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="phone" class="form-label fw-semibold">Kapcsolattartó
+                                                    telefonszáma</label>
+                                                <input type="tel" class="form-control" id="phone" name="phone"
+                                                    placeholder="+36 30 123 4567" pattern="\+36\s\d{2}\s\d{3}\s\d{4}"
+                                                    title="A telefonszámnak a következő formátumban kell lennie: +36 30 123 4567"
+                                                    required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="address" class="form-label fw-semibold">Számlázási cím</label>
+                                                <input type="text" name="address" id="address" class="form-control bg-light"
+                                                    placeholder="Számlázási cím" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="d-grid">
+                                                <button class="btn btn-primary" type="submit">Jelentkezés</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 @endsection

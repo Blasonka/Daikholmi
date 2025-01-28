@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,6 +14,8 @@ Route::get('/about', function () {
 Route::get('/form', function () {
     return view('form');
 })->name('form');
+
+Route::post('/form', [StudentController::class, 'store'])->name('student.store');
 
 Auth::routes();
 
