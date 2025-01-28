@@ -25,7 +25,7 @@
             @include('layouts.nav')
         </nav>
 
-        <main class="py-4">
+        <main class="pb-4">
             @yield('content')
         </main>
     </div>

@@ -10,11 +10,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Left Side Of Navbar -->
         <ul class="navbar-nav me-auto text-uppercase ms-auto py-4 py-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Nyitólap</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}#study">Oktatás</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('form') }}">Jelentkezés</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">Cégünkről</a></li>
         </ul>
         <!-- Right Side Of Navbar -->
         <ul class="navbar-nav ">
