@@ -12,8 +12,9 @@
         <ul class="navbar-nav me-auto text-uppercase ms-auto py-4 py-lg-0">
             <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Nyitólap</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('home') }}#study">Oktatás</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('form') }}">Jelentkezés</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('student.create') }}">Jelentkezés</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">Cégünkről</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('student.index') }}">Diákok</a></li>
         </ul>
         <!-- Right Side Of Navbar -->
         <ul class="navbar-nav ">

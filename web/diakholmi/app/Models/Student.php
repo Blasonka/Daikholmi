@@ -9,11 +9,16 @@ class Student extends Model
 {
     use HasFactory;
 
-    // Tábla tulajdonságok
+    // Táblatulajdonságok
     protected $table = 'students';
     protected $primaryKey = 'id';
     public $timestamps = true;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var list<string>
+     */
     protected $fillable = [
         'name',
         'school',

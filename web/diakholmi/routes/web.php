@@ -11,11 +11,13 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::get('/form', function () {
-    return view('form');
-})->name('form');
-
-Route::post('/form', [StudentController::class, 'store'])->name('student.store');
+//Route::get('/students', [StudentController::class, 'create'])->name('student.create');
+//Route::post('/students', [StudentController::class, 'store'])->name('student.store');
+Route::resource('/students', StudentController::class)
+    ->name('index', 'student.index')
+    ->name('create', 'student.create')
+    ->name('store', 'student.store')
+    ->name('destroy', 'student.delete');
 
 Auth::routes();
 

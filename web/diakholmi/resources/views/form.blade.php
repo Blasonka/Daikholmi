@@ -11,6 +11,17 @@
                         <div class="col-lg-6">
                             <div class="bg-white p-5 rounded shadow mt-5">
                                 <h2 class="display-6 fw-bold text-center mb-4">Jelentkezés</h2>
+
+                                @if ($errors->any())
+                                    <div class="alert alert-warning dy-3">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+
                                 <form method="POST" action="{{ route('student.store') }}">
                                     @csrf
                                     <div class="row">
@@ -59,8 +70,8 @@
                                         <div class="col-md-12">
                                             <div class="mb-3">
                                                 <label for="address" class="form-label fw-semibold">Számlázási cím</label>
-                                                <input type="text" name="address" id="address" class="form-control bg-light"
-                                                    placeholder="Számlázási cím" required>
+                                                <input type="text" name="address" id="address"
+                                                    class="form-control bg-light" placeholder="Számlázási cím" required>
                                             </div>
                                         </div>
                                         <div class="col-md-5">

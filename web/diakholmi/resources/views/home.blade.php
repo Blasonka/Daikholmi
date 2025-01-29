@@ -13,7 +13,7 @@
                         <h1 class="display-3 fw-bold">Középiskolai felkészítő <span class="text-primary">Győrben</span>
                         </h1>
                         <p class="lead my-4">Intenzív felkészítés a középiskolai írásbeli felvételi vizsgára</p><a
-                            class="btn btn-lg btn-primary" href="{{ route('form') }}">Jelentkezés</a>
+                            class="btn btn-lg btn-primary" href="{{ route('student.create') }}">Jelentkezés</a>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,8 @@
                             1
                         </div>
                         <h5 class="mt-3">...</h5>
-                        <p class="text-muted">E-mailt kell küldeni a <strong>felkeszitgyor@gmail.com</strong> címre, melynek
+                        <p class="text-muted">E-mailt kell küldeni a <strong>felkeszitgyor@gmail.com</strong> címre,
+                            melynek
                             tartalma: diák
                             neve, évfolyama, iskola neve, kapcsolattartó szülő telefonszáma, szülő e-mail címe, lakcím
                             vagy számlacím. <strong>A regisztráció még nem jelent egyben beiratkozást is!</strong></p>
@@ -186,7 +187,8 @@
                             4
                         </div>
                         <h5 class="mt-3">...</h5>
-                        <p class="text-muted">A csoportok kialakítása a beiratkozáskor történik, kisebb változásokra szülői
+                        <p class="text-muted">A csoportok kialakítása a beiratkozáskor történik, kisebb változásokra
+                            szülői
                             kérésre (pl.
                             órarend változás miatt, iskolai program, betegség, stb…) lehetőséget adunk. Egyeztetés után
                             bekapcsolódni később is van lehetőség, de a tanfolyam elindulása után jelentkezőket csak a
