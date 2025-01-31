@@ -2,16 +2,15 @@
 
 @section('content')
     <section class="py-5">
-        <div class="position-relative py-5">
-            <img alt="" class=" position-absolute img-fluid bg-image" src="img/library2.jpg" style="z-index:-5;">
-            <div class="position-absolute bg-image"></div>
+        <div class="position-relative">
+            <div class="position-absolute" style="z-index:-2;"><img alt="" class="img-fluid object-fit-scale"
+                    src="/img/library2.jpg"></div>
             <div class="position-relative">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-6">
                             <div class="bg-white p-5 rounded shadow mt-5">
                                 <h2 class="display-6 fw-bold text-center mb-4">Jelentkezés</h2>
-
                                 @if ($errors->any())
                                     <div class="alert alert-warning dy-3">
                                         <ul>
@@ -76,7 +75,7 @@
                                         </div>
                                         <div class="col-md-5">
                                             <div class="d-grid">
-                                                <button class="btn btn-primary" type="submit">Jelentkezés</button>
+                                                <button class="btn btn-success" type="submit">Jelentkezés</button>
                                             </div>
                                         </div>
                                     </div>

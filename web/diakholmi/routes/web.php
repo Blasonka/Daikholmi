@@ -19,6 +19,10 @@ Route::resource('/students', StudentController::class)
     ->name('store', 'student.store')
     ->name('destroy', 'student.delete');
 
+    Route::get('/user/{id}', function (string $id) {
+    return 'User '.$id;
+});
+
 Auth::routes();
 
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
