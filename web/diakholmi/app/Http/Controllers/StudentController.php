@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use App\Approvedemand;
+use Maatwebsite\Excel\Facades\Excel;
 
 class StudentController extends Controller
 {
@@ -15,7 +17,7 @@ class StudentController extends Controller
     public function index()
     {
         //
-        $students = Student::all(); // select * from students
+        $students = Student::paginate(10); // select * from students
         //dd($students);
         return view('students', ['students' => $students]);
     }
@@ -62,5 +64,10 @@ class StudentController extends Controller
     {
         $student->delete();
         return redirect(route('student.index'));
+    }
+
+    public function export()
+    {
+        return Excel::download(new Student, 'users.xlsx');
     }
 }

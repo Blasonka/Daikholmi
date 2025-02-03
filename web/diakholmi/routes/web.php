@@ -22,6 +22,7 @@ Route::resource('/students', StudentController::class)
     Route::get('/user/{id}', function (string $id) {
     return 'User '.$id;
 });
+Route::get('/students/export', [App\Http\Controllers\StudentController::class, 'export'])->name('student.export');
 
 Auth::routes();
 
