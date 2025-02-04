@@ -6,7 +6,6 @@
 //
 // Scripts
 //
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -54,15 +53,13 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-let deleteButton = document.querySelectorAll('.delete'); // az összes gomb kiválasztása
-deleteButton.forEach(oneButton => {
-    oneButton.addEventListener('click', ()=> {
-        console.log(oneButton.dataset.id);
-        console.log(oneButton.dataset.studentname);
-        let deleteForm = document.querySelector('#deleteform');
-        deleteForm.action='/students/'+oneButton.dataset.toFixed;
+// let deleteButton = document.querySelectorAll('.delete'); // az összes gomb kiválasztása
+// deleteButton.forEach(oneButton => {
+//     oneButton.addEventListener('click', ()=> {
+//         let deleteForm = document.querySelector('#deleteform');
+//         deleteForm.action='/students'+oneButton.dataset.toFixed;
 
-        let studentName = document.querySelector('#studentname');
-        studentName.textContent = oneButton.dataset.studentname;
-    });
-});
+//         let studentName = document.querySelector('#studentname');
+//         studentName.textContent = oneButton.dataset.studentname;
+//     });
+// });

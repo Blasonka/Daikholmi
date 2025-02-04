@@ -37,8 +37,8 @@
                                 <td><a href="students/{{ $student->id }}/edit" class="btn btn-warning disabled"><i
                                             class="bi bi-pencil-square"></i></a></td>
                                 <td> <button type="button" class="btn btn-danger delete" data-bs-toggle="modal"
-                                        data-bs-target="#deleteModal" data-id="{{ $student->id }}"
-                                        data-studentname="{{ $student->name }}"><i class="bi bi-trash3"></i></button>
+                                        data-bs-target="#deleteModal" data-bs-id="{{ $student->id }}"
+                                        data-bs-name="{{ $student->name }}"><i class="bi bi-trash3"></i></button>
                                 </td>
                             </tr>
                         @endforeach
@@ -59,6 +59,7 @@
         <div class="modal-dialog">
             <form action="" method="POST" id="deleteform">
                 @csrf
+                {{-- @method('delete') --}}
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Diák törlése - <span id="studentname"></span>
@@ -76,4 +77,26 @@
             </form>
         </div>
     </div>
+
+    <script>
+        const deleteModal = document.getElementById('deleteModal')
+        const deleteForm = document.getElementById('deleteform')
+        if (deleteModal) {
+            deleteModal.addEventListener('show.bs.modal', event => {
+                // Button that triggered the modal
+                const button = event.relatedTarget
+                // Extract info from data-bs-* attributes
+                const id = button.getAttribute('data-bs-id')
+                const name = button.getAttribute('data-bs-name')
+                // If necessary, you could initiate an Ajax request here
+                // and then do the updating in a callback.
+
+                // Update the modal's content.
+                const modalTitle = deleteModal.querySelector('#studentname')
+
+                modalTitle.textContent = `${name}`
+                deleteForm.dataset.action = '{{ route('student.delete', ':id') }}'.replace(':id', id);
+            })
+        }
+    </script>
 @endsection
