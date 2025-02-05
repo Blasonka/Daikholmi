@@ -5,10 +5,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <i class="bi bi-check"></i>
+                            {{ session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @elseif (session('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="bi bi-exclamation-circle-fill"></i>
+                            {{ session('error') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
                     <h1 class="display-3 text-center my-3">Diákok</h1>
-                    <form action="{{ route('student.export') }}">
-                        <button type="button" class="btn btn-primary" actio>Primary</button>
-                    </form>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{ route('student.export') }}" class="btn btn-success">
+                            <i class="bi bi-file-earmark-excel"></i> Excel Export
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="table-responsive">
@@ -59,7 +74,7 @@
         <div class="modal-dialog">
             <form action="" method="POST" id="deleteform">
                 @csrf
-                {{-- @method('delete') --}}
+                @method('DELETE')
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Diák törlése - <span id="studentname"></span>
@@ -93,9 +108,9 @@
 
                 // Update the modal's content.
                 const modalTitle = deleteModal.querySelector('#studentname')
-
                 modalTitle.textContent = `${name}`
-                deleteForm.dataset.action = '{{ route('student.delete', ':id') }}'.replace(':id', id);
+
+                deleteForm.action = '{{ route('students.destroy', ':id') }}'.replace(':id', id);
             })
         }
     </script>

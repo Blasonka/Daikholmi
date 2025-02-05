@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
-use App\Approvedemand;
+use App\Exports\StudentsExport;
 use Maatwebsite\Excel\Facades\Excel;
 
 class StudentController extends Controller
@@ -21,6 +21,13 @@ class StudentController extends Controller
         //dd($students);
         return view('students', ['students' => $students]);
     }
+
+    // Egy diák adatainak megjelenítése
+    //public function show($id)
+    //{
+    //    $student = Student::findOrFail($id);
+    //    return $student;
+    //}
 
     /**
      * Show the form for creating a new resource.
@@ -60,14 +67,23 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $id)
+    public function destroy($id)
     {
-        Student::destroy($id);
-        return redirect(route('student.index'));
+        $student = Student::find($id);
+
+        if (!$student) {
+            return redirect()->route('student.index')->with('error', 'Diák nem található.');
+        }
+
+        if ($student->delete()) {
+            return redirect()->route('student.index')->with('success', 'Diák sikeresen törölve.');
+        } else {
+            return redirect()->route('student.index')->with('error', 'Hiba történt a törlés során.');
+        }
     }
 
     public function export()
     {
-        return Excel::download(new Student, 'users.xlsx');
+        return Excel::download(new StudentsExport, 'diakok.xlsx');
     }
 }

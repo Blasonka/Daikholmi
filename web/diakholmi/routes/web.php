@@ -11,20 +11,11 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-//Route::get('/students', [StudentController::class, 'create'])->name('student.create');
-//Route::post('/students', [StudentController::class, 'store'])->name('student.store');
 Route::resource('/students', StudentController::class)
-    ->name('index', 'student.index')
-    ->name('create', 'student.create')
-    ->name('store', 'student.store');
+    ->name('index', 'student.index');
 
-Route::get('/user/{id}', function (string $id) {
-    return 'User ' . $id;
-});
+Route::get('/student/export', [StudentController::class, 'export'])->name('student.export');
 
-Route::post('/students/{id}', [StudentController::class, 'destroy'])->name('student.delete');
-
-Route::get('/students/export', [App\Http\Controllers\StudentController::class, 'export'])->name('student.export');
 
 Auth::routes();
 

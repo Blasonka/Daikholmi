@@ -14,7 +14,7 @@
                         <h1 class="display-3 fw-bold">Középiskolai felkészítő <span class="text-success">Győrben</span>
                         </h1>
                         <p class="lead my-4">Intenzív felkészítés a középiskolai írásbeli felvételi vizsgára</p><a
-                            class="btn btn-lg btn-success" href="{{ route('student.create') }}">Jelentkezés</a>
+                            class="btn btn-lg btn-success" href="{{ route('students.create') }}">Jelentkezés</a>
                     </div>
                 </div>
             </div>

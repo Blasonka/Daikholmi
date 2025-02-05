@@ -3,7 +3,7 @@
     <ul class="nav justify-content-center border-bottom pb-2 mb-0">
         <li class="nav-item"><a href="{{ route('home') }}" class="nav-link px-2 text-muted">Nyitólap</a></li>
         <li class="nav-item"><a href="{{ route('home') }}#study" class="nav-link px-2 text-muted">Oktatás</a></li>
-        <li class="nav-item"><a href="{{ route('student.create') }}" class="nav-link px-2 text-muted">Jelentkezés</a></li>
+        <li class="nav-item"><a href="{{ route('students.create') }}" class="nav-link px-2 text-muted">Jelentkezés</a></li>
         <li class="nav-item"><a href="{{ route('about') }}" class="nav-link px-2 text-muted">Cégünkről</a></li>
     </ul>
     <ul class="nav justify-content-center">
