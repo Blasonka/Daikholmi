@@ -91,13 +91,13 @@ class StudentController extends Controller
         $student = Student::find($id);
 
         if (!$student) {
-            return redirect()->route('student.index')->with('error', 'Diák nem található.');
+            return redirect()->route('students.index')->with('error', 'Diák nem található.');
         }
 
         if ($student->delete()) {
-            return redirect()->route('student.index')->with('success', 'Diák sikeresen törölve.');
+            return redirect()->route('students.index')->with('success', 'Diák sikeresen törölve.');
         } else {
-            return redirect()->route('student.index')->with('error', 'Hiba történt a törlés során.');
+            return redirect()->route('students.index')->with('error', 'Hiba történt a törlés során.');
         }
     }
 

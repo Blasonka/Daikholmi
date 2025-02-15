@@ -8,6 +8,21 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="bg-white p-5 rounded shadow mt-5">
+                            @if (session('success'))
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <i class="bi bi-check"></i>
+                                    {{ session('success') }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            @elseif (session('error'))
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <i class="bi bi-exclamation-circle-fill"></i>
+                                    {{ session('error') }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            @endif
                             <h2 class="display-6 fw-bold text-center mb-4">Jelentkezés</h2>
                             @if ($errors->any())
                                 <div class="alert alert-warning dy-3">
@@ -53,7 +68,7 @@
                                                 class="form-control bg-light" placeholder="példa@email.com" required>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                    {{-- <div class="col-md-12">
                                         <div class="mb-3">
                                             <label for="phone" class="form-label fw-semibold">Kapcsolattartó
                                                 telefonszáma</label>
@@ -62,7 +77,43 @@
                                                 title="A telefonszámnak a következő formátumban kell lennie: +36 30 123 4567"
                                                 required>
                                         </div>
+                                    </div> --}}
+
+                                    <div class="col-md-12">
+                                        <form id="phoneForm">
+                                            <div class="mb-3">
+                                                <label for="phoneNumber" class="form-label fw-semibold">Kapcsolattartó
+                                                    telefonszáma</label>
+                                                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber"
+                                                    placeholder="+36 30 123 4567" pattern="\+36\s\d{2}\s\d{3}\s\d{4}"
+                                                    title="A telefonszámnak a következő formátumban kell lennie: +36 30 123 4567"
+                                                    required>
+                                                <div class="invalid-feedback">Kérlek, adj meg egy érvényes telefonszámot!
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
+
+                                    <script>
+                                        $(document).ready(function() {
+                                            $("#phoneNumber").inputmask({
+                                                mask: "+36 99 999 9999",
+                                                placeholder: "_",
+                                                showMaskOnHover: false,
+                                                clearIncomplete: true
+                                            });
+
+                                            $("#phoneForm").on("submit", function(event) {
+                                                if (!$("#phoneNumber").inputmask("isComplete")) {
+                                                    event.preventDefault();
+                                                    $("#phoneNumber").addClass("is-invalid");
+                                                } else {
+                                                    $("#phoneNumber").removeClass("is-invalid");
+                                                    alert("Telefonszám beküldve: " + $("#phoneNumber").val());
+                                                }
+                                            });
+                                        });
+                                    </script>
 
                                     <div class="col-md-12">
                                         <div class="mb-3">

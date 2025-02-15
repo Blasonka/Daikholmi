@@ -35,8 +35,13 @@
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            @if (Route::has('user.home'))
+                                <a class="dropdown-item" href="{{ route('user.home') }}">
+                                    Fiókok
+                                </a>
+                            @endif
                             @if (Route::has('register'))
-                                <a class="dropdown-item disabled" href="{{ route('register') }}">
+                                <a class="dropdown-item" href="{{ route('register') }}">
                                     Regisztráció
                                 </a>
                             @endif

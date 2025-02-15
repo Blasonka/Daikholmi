@@ -14,21 +14,17 @@ Route::get('/about', function () {
 
 // Diák létrehozása - ezt bárki láthatja
 Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');
-
-// Csak bejelentkezett felhasználók férhetnek hozzá a többi route-hoz
-Route::middleware(['auth'])->group(function () {
-    Route::resource('/students', StudentController::class)->except(['create']);
-    Route::get('/student/export', [StudentController::class, 'export'])->name('student.export');
-});
-
-Auth::routes();
+Route::post('/students/store', [StudentController::class, 'store'])->name('students.store');
 
 Auth::routes(['register' => false]); // Kikapcsolja a nyilvános regisztrációt
 
+// Csak bejelentkezett felhasználók férhetnek hozzá a többi route-hoz
 Route::middleware(['auth'])->group(function () {
+    Route::resource('/students', StudentController::class)->except(['create', 'store']);
+    Route::get('/student/export', [StudentController::class, 'export'])->name('student.export');
+
     Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
     Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register']);
 });
-
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('user.home');
