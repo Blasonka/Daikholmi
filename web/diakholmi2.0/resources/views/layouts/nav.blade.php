@@ -25,7 +25,7 @@
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}">Bejelentkezés</a>
+                            <a class="nav-link ps-2 {{ request()->routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}">Bejelentkezés</a>
                         </li>
                     @endif
                 @else
@@ -36,12 +36,12 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             @if (Route::has('user.home'))
-                                <a class="dropdown-item {{ request()->routeIs('user.home') ? 'active' : '' }}" href="{{ route('user.home') }}">
+                                <a class="dropdown-item ps-2 {{ request()->routeIs('user.home') ? 'active' : '' }}" href="{{ route('user.home') }}">
                                     Fiókok
                                 </a>
                             @endif
                             @if (Route::has('register'))
-                                <a class="dropdown-item {{ request()->routeIs('register') ? 'active' : '' }}" href="{{ route('register') }}">
+                                <a class="dropdown-item ps-2 {{ request()->routeIs('register') ? 'active' : '' }}" href="{{ route('register') }}">
                                     Regisztráció
                                 </a>
                             @endif
