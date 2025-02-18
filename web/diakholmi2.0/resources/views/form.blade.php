@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
-                        <div class="bg-white p-5 rounded shadow mt-5">
+                        <div class="bg-theme p-5 rounded shadow mt-5">
                             @if (session('success'))
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                                     <i class="bi bi-check"></i>
@@ -41,7 +41,7 @@
                                         <div class="mb-3">
                                             <label for="name" class="form-label fw-semibold">Diák neve</label>
                                             <input type="text" name="name" id="name"
-                                                class="form-control bg-light" placeholder="Horváth Alex" required>
+                                                class="form-control bg-theme" placeholder="Horváth Alex" required>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -49,7 +49,7 @@
                                             <label for="school" class="form-label fw-semibold">Diák jelenlegi
                                                 iskolája</label>
                                             <input type="text" name="school" id="school"
-                                                class="form-control bg-light" placeholder="Kölcsey Ferenc Általános Iskola"
+                                                class="form-control bg-theme" placeholder="Kölcsey Ferenc Általános Iskola"
                                                 required>
                                         </div>
                                     </div>
@@ -57,7 +57,7 @@
                                         <div class="mb-3">
                                             <label for="grade" class="form-label fw-semibold">Diák évfolyama</label>
                                             <input type="number" name="grade" id="grade"
-                                                class="form-control bg-light" placeholder="4" required>
+                                                class="form-control bg-theme" placeholder="4" required>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -65,7 +65,7 @@
                                             <label for="email" class="form-label fw-semibold">Kapcsolattartó e-mail
                                                 címe</label>
                                             <input type="email" name="email" id="email"
-                                                class="form-control bg-light" placeholder="példa@email.com" required>
+                                                class="form-control bg-theme" placeholder="példa@email.com" required>
                                         </div>
                                     </div>
                                     {{-- <div class="col-md-12">
@@ -119,10 +119,10 @@
                                         <div class="mb-3">
                                             <label for="address" class="form-label fw-semibold">Számlázási cím</label>
                                             <input type="text" name="address" id="address"
-                                                class="form-control bg-light" placeholder="Számlázási cím" required>
+                                                class="form-control bg-theme" placeholder="Számlázási cím" required>
                                         </div>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-md-5 mx-auto">
                                         <div class="d-grid">
                                             <button class="btn btn-success" type="submit">Jelentkezés</button>
                                         </div>

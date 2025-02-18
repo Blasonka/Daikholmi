@@ -4,10 +4,10 @@
 <section class="py-5">
 	<div class="container">
 		<div class="row align-items-center gx-4">
-			<div class="col-md-5">
+			<div class="col-12 col-lg-6 col-xl-5">
 				<div class="ms-md-2 ms-lg-5"><img class="img-fluid rounded-3" src="/img/board.jpg"></div>
 			</div>
-			<div class="col-md-6 offset-md-1">
+			<div class="col-12 col-lg-6 col-xl-7">
 				<div class="ms-md-2 ms-lg-5">
 					<h2 class="display-5 fw-bold border-bottom my-3">Cégünkről</h2>
 					<p class="lead">A <strong> <i>DiákHolMi Kft.</i></strong> 2011 novemberében alakult Győrben. Alapítója és vezetője

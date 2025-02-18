@@ -2,6 +2,54 @@ main {
     min-height: 40vw;
 }
 
+body {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* .navbar-nav .nav-link.active {
+    color: var(--bs-success) !important; /* Bootstrap "success" zöld szín
+    font-weight: bold;
+} */
+
+.navbar-nav .nav-link.active {
+    background-color: var(--bs-success) !important; /* Bootstrap "success" zöld */
+    border-radius: 5px;
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar-nav .dropdown-item.active {
+    background-color: var(--bs-success) !important; /* Bootstrap "success" zöld */
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Hover állapotban a szín */
+.navbar-nav .dropdown-item:hover {
+    font-weight: bold; /* Fehér szöveg */
+}
+
+/* Active állapotban (amikor lenyomva van az egér) */
+.navbar-nav .dropdown-item:active {
+    background-color: var(--bs-success); /* Sötétebb zöld */
+}
+
+#themeToggle {
+    z-index: 1050; /* Bootstrap modal (1050) feletti érték */
+}
+
+.bg-theme {
+    background-color: var(--bs-light);
+    color: var(--bs-dark);
+}
+
+[data-bs-theme="dark"] .bg-theme {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+
 .opacity {
     /* opacity: 0.7; */
     filter: blur(3px);

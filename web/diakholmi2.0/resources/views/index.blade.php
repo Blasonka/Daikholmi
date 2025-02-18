@@ -10,18 +10,17 @@
             </div>
             <div class="row">
                 <div class="col-xl-5 col-lg-6">
-                    <div class="bg-white p-5 shadow">
+                    <div class="bg-theme p-5 shadow">
                         <h1 class="display-3 fw-bold">Középiskolai felkészítő <span class="text-success">Győrben</span>
                         </h1>
-                        <p class="lead my-4">Intenzív felkészítés a középiskolai írásbeli felvételi vizsgára</p><a
-                            class="btn btn-lg btn-success" href="{{ route('students.create') }}">Jelentkezés</a>
-                    </div>
+                        <p class="lead my-4">Intenzív felkészítés a középiskolai írásbeli felvételi vizsgára</p>
+                        <a class="btn btn-lg btn-success d-block d-md-inline mx-md-auto mx-0" href="{{ route('students.create') }}">Jelentkezés</a>                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-5 bg-white" id="study">
+    <section class="py-5 bg-theme" id="study">
         <div class="container">
             <div class="row justify-content-center text-center mb-3">
                 <div class="col-lg-8 col-xl-7">
@@ -129,7 +128,7 @@
         </div>
     </section>
 
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-theme">
         <div class="container">
             <!-- Heading -->
             <div class="row text-center mb-4">
@@ -142,7 +141,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <!-- Step -->
-                    <div class="card rounded-0 text-center p-3 bg-light px-5 mb-5">
+                    <div class="card rounded-0 text-center p-3 bg-success-subtle px-5 mb-5">
                         <div class="d-flex rounded-circle mx-auto align-items-center justify-content-center text-white fs-3 fw-bold bg-success border border-white border-4"
                             style="width: 4rem; height:4rem; margin-top: -3rem;">
                             1
@@ -155,7 +154,7 @@
                             vagy számlacím. <strong>A regisztráció még nem jelent egyben beiratkozást is!</strong></p>
                     </div>
                     <!-- Step -->
-                    <div class="card rounded-0 text-center p-3 bg-light px-5 mb-5">
+                    <div class="card rounded-0 text-center p-3 bg-success-subtle px-5 mb-5">
                         <div class="d-flex rounded-circle mx-auto align-items-center justify-content-center text-white fs-3 fw-bold bg-success border border-white border-4"
                             style="width: 4rem; height:4rem; margin-top: -3rem;">
                             2
@@ -168,7 +167,7 @@
                         </p>
                     </div>
                     <!-- Step -->
-                    <div class="card rounded-0 text-center p-3 bg-light px-5 mb-5">
+                    <div class="card rounded-0 text-center p-3 bg-success-subtle px-5 mb-5">
                         <div class="d-flex rounded-circle mx-auto align-items-center justify-content-center text-white fs-3 fw-bold bg-success border border-white border-4"
                             style="width: 4rem; height:4rem; margin-top: -3rem;">
                             3
@@ -181,7 +180,7 @@
                                 adatok birtokában kell dönteni!</strong></p>
                     </div>
                     <!-- Step -->
-                    <div class="card rounded-0 text-center p-3 bg-light px-5 mb-5">
+                    <div class="card rounded-0 text-center p-3 bg-success-subtle px-5 mb-5">
                         <div class="d-flex rounded-circle mx-auto align-items-center justify-content-center text-white fs-3 fw-bold bg-success border border-white border-4"
                             style="width: 4rem; height:4rem; margin-top: -3rem;">
                             4
