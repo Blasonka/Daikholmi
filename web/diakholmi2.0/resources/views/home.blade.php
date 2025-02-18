@@ -48,7 +48,7 @@
                 </table>
                 <nav aria-label="Page navigation example">
                     <div class="pagination">
-                        {{ $students->links('pagination::bootstrap-5') }}
+                        {{ $students->links('pagination::bootstrap-4') }}
                     </div>
                 </nav>
             </div>
