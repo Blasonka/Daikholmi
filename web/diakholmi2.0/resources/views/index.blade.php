@@ -9,7 +9,7 @@
                 <img alt="" class="img-fluid h-100 opacity object-fit-cover" src="/img/library3.jpg">
             </div>
             <div class="row">
-                <div class="col-xl-5 col-lg-6">
+                <div class="col-xl-6 col-lg-7 col-md-8">
                     <div class="bg-theme p-5 shadow">
                         <h1 class="display-3 fw-bold">Középiskolai felkészítő <span class="text-success">Győrben</span>
                         </h1>

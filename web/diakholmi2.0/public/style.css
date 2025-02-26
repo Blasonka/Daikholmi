@@ -8,6 +8,13 @@ body {
     font-style: normal;
 }
 
+.navbar .img-fluid {
+    height: 1.8em; /* A betűméret alapú méretezés */
+    width: auto;
+    margin-right: 1em;
+}
+
+
 /* .navbar-nav .nav-link.active {
     color: var(--bs-success) !important; /* Bootstrap "success" zöld szín
     font-weight: bold;
