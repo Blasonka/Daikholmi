@@ -3,6 +3,7 @@
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 Route::get('/', function () {
     return view('index');
@@ -25,6 +26,20 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
     Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register']);
+
+    Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('user.home');
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+
+$request->fulfill();
+
+
+
+return redirect('/home');
+
+})->middleware(['auth', 'signed'])->name('verification.verify');

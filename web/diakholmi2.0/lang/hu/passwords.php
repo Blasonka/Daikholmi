@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'reset' => 'Az új jelszó beállítva!',
-    'sent' => 'Jelszó-emlékeztető elküldve!',
-    'throttled' => 'Kérjük várjon, mielőtt újra megpróbálná.',
-    'token' => 'Ez az új jelszó generálásához tartozó token érvénytelen.',
-    'user' => "Nem található felhasználó a megadott email címmel.",
+    'reset' => 'A jelszavad sikeresen vissza lett állítva!',
+    'sent' => 'Elküldtük az e-mailt a jelszó-visszaállításhoz!',
+    'throttled' => 'Kérlek, várj egy kicsit, mielőtt újra próbálkozol!',
+    'token' => 'Ez a jelszó-visszaállító token érvénytelen.',
+    'user' => "Nem található felhasználó ezzel az e-mail címmel.",
 
 ];

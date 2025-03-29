@@ -146,7 +146,7 @@
                             style="width: 4rem; height:4rem; margin-top: -3rem;">
                             1
                         </div>
-                        <h5 class="mt-3">...</h5>
+                        <h5 class="mt-3">Regisztráció menete</h5>
                         <p class="text-muted">E-mailt kell küldeni a <strong>felkeszitgyor@gmail.com</strong> címre,
                             melynek
                             tartalma: diák
@@ -159,7 +159,7 @@
                             style="width: 4rem; height:4rem; margin-top: -3rem;">
                             2
                         </div>
-                        <h5 class="mt-3">...</h5>
+                        <h5 class="mt-3">Visszajelzés a regisztrációról</h5>
                         <p class="text-muted">Pár napon belül mindenki visszajelzést kap a regisztrációról és általános
                             tájékoztatást a
                             tanfolyamról. Aki nem kapja meg, jelezze a <strong>diakholmi@gmail.com</strong> címen vagy a
@@ -172,7 +172,7 @@
                             style="width: 4rem; height:4rem; margin-top: -3rem;">
                             3
                         </div>
-                        <h5 class="mt-3">...</h5>
+                        <h5 class="mt-3">Tanfolyam előtti tájékoztatás</h5>
                         <p class="text-muted">A tanfolyam kezdése előtt a regisztráltakat tájékoztatjuk az aktuális
                             információkról (mikor –
                             nap, óra – kezdődik, hány csoportot tudunk indítani, mennyibe kerül, ki tartja, mit kell
@@ -185,7 +185,7 @@
                             style="width: 4rem; height:4rem; margin-top: -3rem;">
                             4
                         </div>
-                        <h5 class="mt-3">...</h5>
+                        <h5 class="mt-3">Csoportok kialakítása</h5>
                         <p class="text-muted">A csoportok kialakítása a beiratkozáskor történik, kisebb változásokra
                             szülői
                             kérésre (pl.
