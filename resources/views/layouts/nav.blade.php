@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md navbar shadow-sm bg-body-tertiary">
     <div class="container">
         <div class="d-flex align-items-center">
-            <img src="{{ asset('img/logo.png') }}" alt="" class="img-fluid">
+            <img src="/img/logo.png" alt="" class="img-fluid">
         </div>
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}

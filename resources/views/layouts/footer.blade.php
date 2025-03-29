@@ -37,7 +37,7 @@
         <svg class="bi me-2" width="40" height="32">
             <use xlink:href="#bootstrap"></use>
         </svg>
-        <img src="{{ asset('img/diakholmi.png') }}" alt="" class="img-fluid">
+        <img src="/img/diakholmi.png" alt="" class="img-fluid">
     </a>
 
     <ul class="nav col-md-4 justify-content-end">

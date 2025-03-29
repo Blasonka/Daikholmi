@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row align-items-center gx-4">
 			<div class="col-12 col-lg-6 col-xl-5">
-				<div class="ms-md-2 ms-lg-5"><img class="img-fluid rounded-3" src="{{ asset('img/board.jpg') }}"></div>
+				<div class="ms-md-2 ms-lg-5"><img class="img-fluid rounded-3" src="/img/board.jpg"></div>
 			</div>
 			<div class="col-12 col-lg-6 col-xl-7">
 				<div class="ms-md-2 ms-lg-5">
