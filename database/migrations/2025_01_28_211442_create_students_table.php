@@ -20,6 +20,10 @@ return new class extends Migration
             $table->string('phone');
             $table->string('address');
             $table->timestamps();
+
+            // Add charset and collation
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_unicode_ci';
         });
     }
 
