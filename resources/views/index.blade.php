@@ -6,7 +6,7 @@
             <div class="col-md-4 d-none d-md-block h-100 position-absolute top-0 start-0 bg-success" style="z-index:-2;">
             </div>
             <div class="col-md-8 h-100 position-absolute top-0 end-0 bg-dark" style="z-index:-2;">
-                <img alt="" class="img-fluid h-100 opacity object-fit-cover" src="/img/library3.jpg">
+                <img alt="" class="img-fluid h-100 opacity object-fit-cover" src="{{ asset('img/library3.jpg') }}">
             </div>
             <div class="row">
                 <div class="col-xl-6 col-lg-7 col-md-8">
