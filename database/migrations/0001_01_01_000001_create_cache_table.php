@@ -15,12 +15,20 @@ return new class extends Migration
             $table->string('key')->primary();
             $table->mediumText('value');
             $table->integer('expiration');
+
+            // Add charset and collation
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_unicode_ci';
         });
 
         Schema::create('cache_locks', function (Blueprint $table) {
             $table->string('key')->primary();
             $table->string('owner');
             $table->integer('expiration');
+
+            // Add charset and collation
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_unicode_ci';
         });
     }
 
