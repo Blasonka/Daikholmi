@@ -43,3 +43,8 @@ $request->fulfill();
 return redirect('/home');
 
 })->middleware(['auth', 'signed'])->name('verification.verify');
+
+// Minden más nem létező útvonal átirányítása a főoldalra
+Route::fallback(function () {
+    return redirect()->route('home');
+});
