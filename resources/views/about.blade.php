@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Rólunk - Diákholmi')
+@section('description', 'Tudj meg többet a Diákholmi csapatáról és küldetéséről.')
+@section('keywords', 'rólunk, diákholmi, csapat, küldetés')
+
 @section('content')
 <section class="py-5">
 	<div class="container">

@@ -9,6 +9,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta name="description" content="@yield('description', 'Diákholmi - Minőségi iskolaszerek és felszerelések.')">
+    <meta name="keywords" content="@yield('keywords', 'diák, iskolaszerek, felszerelések, tanulás')">
+
+    <link rel="canonical" href="{{ url()->current() }}">
+
     <link rel="icon" type="/image/x-icon" href="/img/logo.png" href="{{asset('img/logo.png')}}">
 
     <!-- Fonts -->
