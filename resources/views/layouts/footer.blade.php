@@ -45,7 +45,7 @@
         <li class="nav-item"><a href="{{ route('home') }}#study" class="nav-link px-2 text-body-secondary">Oktatás</a>
         </li>
         <li class="nav-item"><a href="{{ route('students.create') }}"
-                class="nav-link px-2 text-body-secondary">Jelentkezés</a></li>
+                class="nav-link px-2 text-body-secondary">Regisztráció</a></li>
         <li class="nav-item"><a href="{{ route('about') }}" class="nav-link px-2 text-body-secondary">Rólunk</a></li>
     </ul>
 

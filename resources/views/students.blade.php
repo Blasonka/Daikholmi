@@ -24,6 +24,22 @@
                             <i class="bi bi-file-earmark-excel"></i> Excel Export
                         </a>
                     </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end my-3">
+                        <form method="GET" action="{{ route('students.index') }}" class="d-flex">
+                            <select name="grade" id="grade" class="form-select me-2">
+                                <option value="" selected>Minden évfolyam</option>
+                                <option value="3" {{ request('grade') == '3' ? 'selected' : '' }}>3</option>
+                                <option value="4" {{ request('grade') == '4' ? 'selected' : '' }}>4</option>
+                                <option value="5" {{ request('grade') == '5' ? 'selected' : '' }}>5</option>
+                                <option value="6" {{ request('grade') == '6' ? 'selected' : '' }}>6</option>
+                                <option value="7" {{ request('grade') == '7' ? 'selected' : '' }}>7</option>
+                                <option value="8" {{ request('grade') == '8' ? 'selected' : '' }}>8</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">Szűrés</button>
+                        </form>
+                    </div>
+
                 </div>
             </div>
             <div class="table-responsive">
@@ -37,6 +53,7 @@
                             <th scope="col" class="text-center">E-mail</th>
                             <th scope="col" class="text-center">Telefonszám</th>
                             <th scope="col" class="text-center">Számlázási cím</th>
+                            <th scope="col" class="text-center">Regisztráció ideje</th>
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
@@ -49,6 +66,7 @@
                                 <td>{{ $student->email }}</td>
                                 <td>{{ $student->phone }}</td>
                                 <td>{{ $student->address }}</td>
+                                <td>{{ $student->created_at }}</td>
                                 <td> <a href="{{ route('students.edit', $student->id) }}" class="btn btn-warning">
                                         <i class="bi bi-pencil-square"></i></a></td>
                                 <td> <button type="button" class="btn btn-danger delete" data-bs-toggle="modal"

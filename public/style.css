@@ -8,6 +8,18 @@ body {
     font-style: normal;
 }
 
+select.form-select {
+    font-family: 'Poppins', serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+select.form-select option {
+    font-family: 'Poppins', serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
 .navbar .img-fluid {
     height: 1.8em; /* A betűméret alapú méretezés */
     width: auto;

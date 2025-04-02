@@ -20,7 +20,7 @@
                         href="{{ route('home') }}#study">Oktatás</a></li>
                 <li class="nav-item"><a
                         class="nav-link ps-2 {{ request()->routeIs('students.create') ? 'active' : '' }}"
-                        href="{{ route('students.create') }}">Jelentkezés</a></li>
+                        href="{{ route('students.create') }}">Regisztráció</a></li>
                 <li class="nav-item"><a class="nav-link ps-2 {{ request()->routeIs('about') ? 'active' : '' }}"
                         href="{{ route('about') }}">Rólunk</a></li>
                 @auth

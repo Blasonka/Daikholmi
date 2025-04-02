@@ -14,7 +14,9 @@
                         <h1 class="display-3 fw-bold">Középiskolai felkészítő <span class="text-success">Győrben</span>
                         </h1>
                         <p class="lead my-4">Intenzív felkészítés a középiskolai írásbeli felvételi vizsgára</p>
-                        <a class="btn btn-lg btn-success d-block d-md-inline mx-md-auto mx-0" href="{{ route('students.create') }}">Jelentkezés</a>                    </div>
+                        <a class="btn btn-lg btn-success d-block d-md-inline mx-md-auto mx-0"
+                            href="{{ route('students.create') }}">Regisztráció</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,7 +45,7 @@
                         </div>
                         <div>
                             <h5 class="mb-2 mb-lg-3 fw-bold">Siker</h5>
-                            <p><span class="text-decoration-underline"> Bármelyik középiskolába jelentkezik</span>, az
+                            <p><span class="text-decoration-underline">Bármelyik középiskolába jelentkezik</span>, az
                                 írásbeli felvételi vizsgán lehet megszerezni és
                                 elveszteni a legtöbb pontot – figyelmetlenségből, az izgalom miatt, vagy mert ismeretlen
                                 feladat típussal találkozik gyermekünk.
@@ -147,11 +149,10 @@
                             1
                         </div>
                         <h5 class="mt-3">Regisztráció menete</h5>
-                        <p class="text-muted">E-mailt kell küldeni a <strong>felkeszitgyor@gmail.com</strong> címre,
-                            melynek
-                            tartalma: diák
-                            neve, évfolyama, iskola neve, kapcsolattartó szülő telefonszáma, szülő e-mail címe, lakcím
-                            vagy számlacím. <strong>A regisztráció még nem jelent egyben beiratkozást is!</strong></p>
+                        <p class="text-muted">Ki kell tölteni a <strong>regisztrációs űrlapot</strong>. Az adatok
+                            elfogadását és a sikeres elküldést a program jelezni fogja!
+                            <strong>A regisztráció még nem jelent egyben beiratkozást is!</strong>
+                        </p>
                     </div>
                     <!-- Step -->
                     <div class="card rounded-0 text-center p-3 bg-success-subtle px-5 mb-5">
@@ -160,10 +161,9 @@
                             2
                         </div>
                         <h5 class="mt-3">Visszajelzés a regisztrációról</h5>
-                        <p class="text-muted">Pár napon belül mindenki visszajelzést kap a regisztrációról és általános
-                            tájékoztatást a
-                            tanfolyamról. Aki nem kapja meg, jelezze a <strong>diakholmi@gmail.com</strong> címen vagy a
-                            <strong>20/969-1417</strong>-es telefonon!
+                        <p class="text-muted">Az adatok beérkezése utáni 5 munkanapon belül mindenki visszajelzést kap a
+                            regisztrációról és általános tájékoztatást a tanfolyamról. Aki nem kapja meg, jelezze a
+                            <strong><a href="mailto:felkeszitgyor@gmail.com">felkeszitgyor@gmail.com</a></strong> címen.
                         </p>
                     </div>
                     <!-- Step -->
@@ -176,8 +176,12 @@
                         <p class="text-muted">A tanfolyam kezdése előtt a regisztráltakat tájékoztatjuk az aktuális
                             információkról (mikor –
                             nap, óra – kezdődik, hány csoportot tudunk indítani, mennyibe kerül, ki tartja, mit kell
-                            hozni, stb…) és a beiratkozás helyéről, idejéről. <strong>Beiratkozásról csak a pontos
-                                adatok birtokában kell dönteni!</strong></p>
+                            hozni, stb…) és a beiratkozás helyéről, idejéről. A felmerülő kérdésekről információ a
+                            <strong><a href="mailto:felkeszitgyor@gmail.com">felkeszitgyor@gmail.com</a></strong> címen
+                            illetve a <strong><a href="tel:+36209691417">+36 20 969 1417</a></strong> telefonszámon
+                            kérhető. <strong>Beiratkozásról csak a pontos
+                                adatok birtokában kell dönteni!</strong>
+                        </p>
                     </div>
                     <!-- Step -->
                     <div class="card rounded-0 text-center p-3 bg-success-subtle px-5 mb-5">

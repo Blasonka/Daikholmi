@@ -23,7 +23,7 @@
                                         aria-label="Close"></button>
                                 </div>
                             @endif
-                            <h2 class="display-6 fw-bold text-center mb-4">Jelentkezés</h2>
+                            <h2 class="display-6 fw-bold text-center mb-4">Regisztráció</h2>
                             @if ($errors->any())
                                 <div class="alert alert-warning dy-3">
                                     <ul>
@@ -56,8 +56,15 @@
                                     <div class="col-md-12">
                                         <div class="mb-3">
                                             <label for="grade" class="form-label fw-semibold">Diák évfolyama</label>
-                                            <input type="number" name="grade" id="grade"
-                                                class="form-control bg-theme" placeholder="4" required>
+                                            <select name="grade" id="grade" class="form-select bg-theme" required>
+                                                <option value="" disabled selected>Válassz évfolyamot</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -71,7 +78,8 @@
 
                                     <div class="col-md-12">
                                         <div class="mb-3">
-                                            <label for="phone" class="form-label fw-semibold">Kapcsolattartó telefonszáma</label>
+                                            <label for="phone" class="form-label fw-semibold">Kapcsolattartó
+                                                telefonszáma</label>
                                             <input type="tel" class="form-control" id="phone" name="phone"
                                                 placeholder="+36 30 123 4567"
                                                 pattern="^(\+36|06)?\s?\d{1,2}\s?\d{3}\s?\d{4}$"
@@ -89,7 +97,7 @@
                                     </div>
                                     <div class="col-md-5 mx-auto">
                                         <div class="d-grid">
-                                            <button class="btn btn-success" type="submit">Jelentkezés</button>
+                                            <button class="btn btn-success" type="submit">Regisztráció</button>
                                         </div>
                                     </div>
                                 </div>

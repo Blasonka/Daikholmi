@@ -13,10 +13,22 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $students = Student::paginate(10);
-        return view('students', ['students' => $students]);
+        $query = Student::query();
+
+        // Filter by grade
+        if ($request->has('grade') && $request->grade != '') {
+            $query->where('grade', $request->grade);
+        }
+
+        $students = $query->paginate(10);
+
+        return view('students', compact('students'));
+
+
+        //$students = Student::paginate(10);
+        //return view('students', ['students' => $students]);
     }
 
     /**
