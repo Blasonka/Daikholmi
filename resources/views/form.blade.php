@@ -72,7 +72,7 @@
                                             <label for="email" class="form-label fw-semibold">Kapcsolattartó e-mail
                                                 címe</label>
                                             <input type="email" name="email" id="email"
-                                                class="form-control bg-theme" placeholder="példa@email.com" required>
+                                                class="form-control bg-theme" placeholder="pelda@email.com" autocomplete="email" required>
                                         </div>
                                     </div>
 
@@ -84,7 +84,7 @@
                                                 placeholder="+36 30 123 4567"
                                                 pattern="^(\+36|06)?\s?\d{1,2}\s?\d{3}\s?\d{4}$"
                                                 title="A telefonszámnak a következő formátumok egyikében kell lennie: +36 30 123 4567, 06 30 123 4567 vagy 30 123 4567"
-                                                required>
+                                                autocomplete="tel" required>
                                         </div>
                                     </div>
 
@@ -92,7 +92,7 @@
                                         <div class="mb-3">
                                             <label for="address" class="form-label fw-semibold">Számlázási cím</label>
                                             <input type="text" name="address" id="address"
-                                                class="form-control bg-theme" placeholder="Számlázási cím" required>
+                                                class="form-control bg-theme" placeholder="Számlázási cím" autocomplete="address-level1" required>
                                         </div>
                                     </div>
                                     <div class="col-md-5 mx-auto">
