@@ -92,7 +92,7 @@
                                         <div class="mb-3">
                                             <label for="address" class="form-label fw-semibold">Számlázási cím</label>
                                             <input type="text" name="address" id="address"
-                                                class="form-control bg-theme" placeholder="Számlázási cím" autocomplete="address-level1" required>
+                                                class="form-control bg-theme" placeholder="Számlázási cím" autocomplete="street-address" required>
                                         </div>
                                     </div>
                                     <div class="col-md-5 mx-auto">
