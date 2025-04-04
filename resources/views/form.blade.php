@@ -105,12 +105,12 @@
                                             <div class="form-group">
                                                 {!! NoCaptcha::display() !!}
                                             </div>
+                                            @if ($errors->has('g-recaptcha-response'))
+                                                <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                                            @endif
                                         </div>
                                     </div>
 
-                                    @if ($errors->has('g-recaptcha-response'))
-                                        <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
-                                    @endif
 
 
                                     <div class="col-md-5 mx-auto">

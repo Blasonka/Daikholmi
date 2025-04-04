@@ -18,6 +18,7 @@
     "between.string": "A(z) :attribute hossza :min és :max karakter között kell, hogy legyen!",
     "boolean": "A(z) :attribute mező csak true vagy false értéket kaphat!",
     "can": "A :attribute-es mező nem engedélyezett értéket tartalmaz.",
+    "captcha": "Kérjük, igazold, hogy nem vagy robot!",
     "confirmed": "A(z) :attribute nem egyezik a megerősítéssel.",
     "contains": "A :attribute-es mezőből hiányzik a kötelező érték.",
     "current_password": "A jelszó helytelen.",
