@@ -72,7 +72,8 @@
                                             <label for="email" class="form-label fw-semibold">Kapcsolattartó e-mail
                                                 címe</label>
                                             <input type="email" name="email" id="email"
-                                                class="form-control bg-theme" placeholder="pelda@email.com" autocomplete="email" required>
+                                                class="form-control bg-theme" placeholder="pelda@email.com"
+                                                autocomplete="email" required>
                                         </div>
                                     </div>
 
@@ -92,9 +93,26 @@
                                         <div class="mb-3">
                                             <label for="address" class="form-label fw-semibold">Számlázási cím</label>
                                             <input type="text" name="address" id="address"
-                                                class="form-control bg-theme" placeholder="Számlázási cím" autocomplete="street-address" required>
+                                                class="form-control bg-theme" placeholder="Számlázási cím"
+                                                autocomplete="street-address" required>
                                         </div>
                                     </div>
+
+                                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                                    <!-- Egyéb mezők -->
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <div class="form-group">
+                                                {!! NoCaptcha::display() !!}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @if ($errors->has('g-recaptcha-response'))
+                                        <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                                    @endif
+
+
                                     <div class="col-md-5 mx-auto">
                                         <div class="d-grid">
                                             <button class="btn btn-success" type="submit">Regisztráció</button>

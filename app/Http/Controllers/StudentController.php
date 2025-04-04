@@ -22,6 +22,7 @@ class StudentController extends Controller
             $query->where('grade', $request->grade);
         }
 
+        $query->orderBy('created_at', 'desc');
         $students = $query->paginate(10);
 
         return view('students', compact('students'));
@@ -51,6 +52,7 @@ class StudentController extends Controller
             'email' => 'required|email|max:50',
             'phone' => 'required|max:20',
             'address' => 'required|string|max:50',
+            'g-recaptcha-response' => 'required|captcha',
         ]);
 
         Student::create($request->all());
