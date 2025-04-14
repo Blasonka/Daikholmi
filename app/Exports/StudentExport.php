@@ -14,12 +14,12 @@ class StudentExport implements FromCollection, WithHeadings, WithMapping
      */
     public function collection()
     {
-        return Student::select('id', 'name', 'school', 'grade', 'email', 'phone', 'address', 'created_at')->get();
+        return Student::select('id', 'name', 'school', 'grade', 'parent_name', 'email', 'phone', 'address', 'created_at')->get();
     }
 
     public function headings(): array
     {
-        return ["ID", "Név", "Iskola", "Osztály", "E-mail", "Telefonszám", "Számlázási cím", "Regisztráció ideje"];
+        return ["ID", "Név", "Iskola", "Osztály", "Szülő neve", "E-mail", "Telefonszám", "Számlázási cím", "Regisztráció ideje"];
     }
 
         /**
@@ -35,6 +35,7 @@ class StudentExport implements FromCollection, WithHeadings, WithMapping
             $student->name,
             $student->school,
             $student->grade,
+            $student->parent_name,
             $student->email,
             $student->phone,
             $student->address,
