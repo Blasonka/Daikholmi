@@ -32,6 +32,11 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="parent_name" class="form-label">Kapcsolattartó neve</label>
+                    <input type="text" class="form-control" id="parent_name" name="parent_name" value="{{ old('parent_name', $student->parent_name) }}" required>
+                </div>
+
+                <div class="mb-3">
                     <label for="email" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="email" name="email" value="{{ old('email', $student->email) }}" required>
                 </div>

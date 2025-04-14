@@ -23,6 +23,7 @@ class Student extends Model
         'name',
         'school',
         'grade',
+        'parent_name',
         'email',
         'phone',
         'address'

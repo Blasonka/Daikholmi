@@ -50,6 +50,7 @@
                             <th scope="col" class="text-center">Név</th>
                             <th scope="col" class="text-center">Iskola</th>
                             <th scope="col" class="text-center">Osztály</th>
+                            <th scope="col" class="text-center">Szülő neve</th>
                             <th scope="col" class="text-center">E-mail</th>
                             <th scope="col" class="text-center">Telefonszám</th>
                             <th scope="col" class="text-center">Számlázási cím</th>
@@ -63,6 +64,7 @@
                                 <td>{{ $student->name }}</td>
                                 <td>{{ $student->school }}</td>
                                 <td>{{ $student->grade }}</td>
+                                <td>{{ $student->parent_name }}</td>
                                 <td>{{ $student->email }}</td>
                                 <td>{{ $student->phone }}</td>
                                 <td>{{ $student->address }}</td>

@@ -69,6 +69,13 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="mb-3">
+                                            <label for="parent_name" class="form-label fw-semibold">Kapcsolattartó neve</label>
+                                            <input type="text" name="parent_name" id="parent_name"
+                                                class="form-control bg-theme" placeholder="Horváth Béla" autocomplete="name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
                                             <label for="email" class="form-label fw-semibold">Kapcsolattartó e-mail
                                                 címe</label>
                                             <input type="email" name="email" id="email"
