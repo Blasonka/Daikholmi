@@ -46,5 +46,5 @@ return redirect('/home');
 
 // Minden más nem létező útvonal átirányítása a főoldalra
 Route::fallback(function () {
-    return redirect()->route('home');
+    abort(404);
 });
