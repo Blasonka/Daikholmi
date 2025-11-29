@@ -1,6 +1,10 @@
 <IfModule mod_rewrite.c>
     Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
     RewriteEngine On
+
+    # FELTÉTEL: Ha a kért útvonal NEM tartalmazza a "/public/"-ot...
+    RewriteCond %{REQUEST_URI} !^/public/
+
+    # ...akkor irányítsd át a public mappába
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
-
