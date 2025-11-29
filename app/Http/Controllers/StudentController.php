@@ -23,7 +23,7 @@ class StudentController extends Controller
         }
 
         $query->orderBy('created_at', 'desc');
-        $students = $query->paginate(10);
+        $students = $query->paginate(50);
 
         return view('students', compact('students'));
 
