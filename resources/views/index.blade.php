@@ -71,9 +71,10 @@
                             <p>Tanáraink kis csoportok (maximum 20 fő) részére tartanak speciális, intenzív felkészítést
                                 felvételi tárgyakból (matematika – magyar nyelv és irodalom), heti 2 tanóra + kötelező
                                 otthoni tanulással (házi feladat), egyéni értékelés, 4, 6 és nyolcosztályos képzésre
-                                jelentkezőknek egyaránt. A szintfelmérő dolgozatok eredményéről a szülők visszajelzést
-                                kapnak, az órai munkát digitális tanterem egészíti ki, biztosítva a házi feladatokhoz a
-                                könnyebb hozzáférést, az esetleges hiányzások egyszerű pótlását!</p>
+                                jelentkezőknek egyaránt. A bemenő szintfelmérő dolgozatok eredményéről a szülők
+                                visszajelzést kapnak, a felkészítés során próbavizsgára is sor kerül. Az órai munkát
+                                digitális tanterem egészíti ki, biztosítva a házi feladatokhoz a könnyebb hozzáférést, az
+                                esetleges hiányzások egyszerű pótlását!</p>
                         </div>
                     </div>
                 </div>
@@ -119,9 +120,8 @@
                         <div>
                             <h5 class="mb-2 mb-lg-3 fw-bold">Aktuális</h5>
                             <p>
-                                1. rész - 2025. március 10-től májusig<br>
-                                2. rész - 2025. szeptembertől novemberig<br>
-                                3. rész - 2025. novembertől 2026. januári vizsgáig
+                                1. rész: előkészítő - 2026. március 9-től 2026. májusig<br>
+                                2. rész: felkészítő - 2026. szeptembertől 2027. januári vizsgáig<br>
                             </p>
                         </div>
                     </div>
