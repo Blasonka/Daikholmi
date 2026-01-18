@@ -34,6 +34,19 @@
                                 </div>
                             @endif
 
+                            <ul class="nav nav-pills nav-justified mb-4" id="seasonTab" role="tablist">
+                                <li class="nav-item">
+                                    <button class="nav-link fw-semibold active" id="tavasz-tab" data-bs-toggle="pill"
+                                        data-bs-target="#tavasz" type="button" onclick="setGrade('tavasz')">Tavaszi
+                                        felkészítő</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link fw-semibold" id="oszi-tab" data-bs-toggle="pill"
+                                        data-bs-target="#oszi" type="button" onclick="setGrade('oszi')">Őszi
+                                        felkészítő</button>
+                                </li>
+                            </ul>
+
                             <form method="POST" action="{{ route('students.store') }}">
                                 @csrf
                                 <div class="row">
@@ -42,6 +55,13 @@
                                             <label for="name" class="form-label fw-semibold">Diák neve</label>
                                             <input type="text" name="name" id="name"
                                                 class="form-control bg-theme" placeholder="Horváth Alex" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label for="grade" class="form-label fw-semibold">Diák évfolyama</label>
+                                            <select name="grade" id="grade" class="form-select bg-theme" required>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -55,23 +75,11 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="mb-3">
-                                            <label for="grade" class="form-label fw-semibold">Diák évfolyama</label>
-                                            <select name="grade" id="grade" class="form-select bg-theme" required>
-                                                <option value="" disabled selected>Válassz évfolyamot</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <label for="parent_name" class="form-label fw-semibold">Kapcsolattartó neve</label>
+                                            <label for="parent_name" class="form-label fw-semibold">Kapcsolattartó
+                                                neve</label>
                                             <input type="text" name="parent_name" id="parent_name"
-                                                class="form-control bg-theme" placeholder="Horváth Béla" autocomplete="name" required>
+                                                class="form-control bg-theme" placeholder="Horváth Béla" autocomplete="name"
+                                                required>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -113,7 +121,8 @@
                                                 {!! NoCaptcha::display() !!}
                                             </div>
                                             @if ($errors->has('g-recaptcha-response'))
-                                                <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                                                <span
+                                                    class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
                                             @endif
                                         </div>
                                     </div>
@@ -133,4 +142,21 @@
             </div>
         </div>
     </section>
+    <script>
+        function setGrade(season) {
+            const select = document.getElementById('grade');
+            select.innerHTML = '<option value="" disabled selected>Válassz évfolyamot</option>';
+
+            const grades = season === 'tavasz' ? [3, 5, 7] : [4, 6, 8];
+
+            grades.forEach(g => {
+                let opt = document.createElement('option');
+                opt.value = g;
+                opt.innerHTML = g;
+                select.appendChild(opt);
+            });
+        }
+        // Init a tavaszival
+        document.addEventListener('DOMContentLoaded', () => setGrade('tavasz'));
+    </script>
 @endsection

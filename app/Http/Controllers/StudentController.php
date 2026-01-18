@@ -7,6 +7,8 @@ use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Exports\StudentsExport;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Mail\RegistrationConfirmation;
+use Illuminate\Support\Facades\Mail;
 
 class StudentController extends Controller
 {
@@ -56,9 +58,12 @@ class StudentController extends Controller
             'g-recaptcha-response' => 'required|captcha',
         ]);
 
-        Student::create($request->all());
+        $student = Student::create($request->all());
 
-        return redirect()->back()->with('success', 'Jelentkezés sikeresen elküldve!');
+        // AZ AUTOMATIKUS EMAIL
+        Mail::to($student->email)->send(new RegistrationConfirmation($student));
+
+        return redirect()->back()->with('success', 'Jelentkezés sikeresen elküldve! Küldtünk egy visszaigazoló e-mailt.');
     }
 
     // Egy diák adatainak megjelenítése
