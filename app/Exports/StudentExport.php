@@ -33,8 +33,8 @@ class StudentExport implements FromCollection, WithHeadings, WithMapping
         return [
             $student->id,
             $student->name,
-            $student->school,
             $student->grade,
+            $student->school,
             $student->parent_name,
             $student->email,
             $student->phone,
